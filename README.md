@@ -80,6 +80,9 @@ For a detailed deployment guide, please refer to our [Installation and Deploymen
 - Create and edit articles through the admin interface.
 - Manage resources in the admin panel.
 - All changes are automatically synced with your GitHub repository.
+##examples
+- bg3mods.com(https://bg3mods.com/)
+- profitcalculator.top(https://profitcalculator.top/)
 
 ## Contributing
 
@@ -94,6 +97,7 @@ GitBase is open-source software licensed under the [MIT license](https://github.
 If you encounter any issues or have questions, please file an issue on the GitHub repository.
 
 ## Acknowledgements
+
 
 GitBase is built with the following open-source libraries:
 - [Next.js](https://nextjs.org/)
