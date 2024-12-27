@@ -12,9 +12,12 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  const resourcesPath = path.join(process.cwd(), 'data', 'json', 'resources.json')
-  const resources = JSON.parse(fs.readFileSync(resourcesPath, 'utf8'))
+  const sectionsPath = path.join(process.cwd(), 'data', 'json', 'sections.json')
+  const { sections } = JSON.parse(fs.readFileSync(sectionsPath, 'utf8'))
   const allPostsData = getSortedPostsData().slice(0, 6)
+
+  // 过滤掉隐藏的sections
+  const visibleSections = sections.filter(section => !section.isHidden)
 
   return (
     <div className="container mx-auto py-12 space-y-16">
@@ -28,7 +31,14 @@ export default function Home() {
         </p>
       </section>
 
-      <ResourceList resources={resources} />
+      {visibleSections.map((section, index) => (
+        <ResourceList 
+          key={section.id} 
+          resources={section.resources || []} 
+          config={section}
+        />
+      ))}
+      
       <ArticleList articles={allPostsData} />
     </div>
   )

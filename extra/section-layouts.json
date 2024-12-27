@@ -1,0 +1,166 @@
+{
+  "layouts": [
+    {
+      "id": "grid-4-modern",
+      "name": "Modern Grid (4 columns)",
+      "description": "Modern grid layout with 4 columns, ideal for showcasing multiple items",
+      "config": {
+        "layout": {
+          "type": "grid",
+          "columns": { "sm": 1, "md": 2, "lg": 3, "xl": 4 },
+          "gap": 6
+        },
+        "styles": {
+          "background": "bg-white",
+          "padding": "py-12",
+          "titleSize": "text-3xl",
+          "containerWidth": "max-w-7xl"
+        }
+      }
+    },
+    {
+      "id": "list-compact",
+      "name": "Compact List",
+      "description": "Compact list view, perfect for information-dense content",
+      "config": {
+        "layout": {
+          "type": "list",
+          "columns": { "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+          "gap": 4
+        },
+        "styles": {
+          "background": "bg-gray-50",
+          "padding": "py-8",
+          "titleSize": "text-2xl",
+          "containerWidth": "max-w-4xl"
+        }
+      }
+    },
+    {
+      "id": "featured-3",
+      "name": "Featured Cards (3 columns)",
+      "description": "Prominent card layout with 3 columns, great for highlighting key items",
+      "config": {
+        "layout": {
+          "type": "featured",
+          "columns": { "sm": 1, "md": 2, "lg": 3, "xl": 3 },
+          "gap": 8
+        },
+        "styles": {
+          "background": "bg-gray-100",
+          "padding": "py-16",
+          "titleSize": "text-4xl",
+          "containerWidth": "max-w-6xl"
+        }
+      }
+    },
+    {
+      "id": "masonry-responsive",
+      "name": "Responsive Masonry",
+      "description": "Dynamic masonry layout that adapts to content size",
+      "config": {
+        "layout": {
+          "type": "masonry",
+          "columns": { "sm": 1, "md": 2, "lg": 3, "xl": 3 },
+          "gap": 6
+        },
+        "styles": {
+          "background": "bg-white",
+          "padding": "py-10",
+          "titleSize": "text-3xl",
+          "containerWidth": "max-w-7xl"
+        }
+      }
+    },
+    {
+      "id": "hero-centered",
+      "name": "Hero Section",
+      "description": "Large hero section with centered content",
+      "config": {
+        "layout": {
+          "type": "hero",
+          "columns": { "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+          "gap": 6
+        },
+        "styles": {
+          "background": "bg-gradient-to-r from-blue-500 to-purple-600",
+          "padding": "py-20",
+          "titleSize": "text-5xl",
+          "containerWidth": "max-w-5xl"
+        }
+      }
+    },
+    {
+      "id": "carousel-modern",
+      "name": "Modern Carousel",
+      "description": "Sliding carousel with modern controls",
+      "config": {
+        "layout": {
+          "type": "carousel",
+          "columns": { "sm": 1, "md": 2, "lg": 3, "xl": 4 },
+          "gap": 4
+        },
+        "styles": {
+          "background": "bg-gray-50",
+          "padding": "py-12",
+          "titleSize": "text-3xl",
+          "containerWidth": "max-w-full"
+        }
+      }
+    },
+    {
+      "id": "sidebar-content",
+      "name": "Sidebar with Content",
+      "description": "Two-column layout with sidebar navigation",
+      "config": {
+        "layout": {
+          "type": "sidebar",
+          "columns": { "sm": 1, "md": 2, "lg": 2, "xl": 2 },
+          "gap": 8
+        },
+        "styles": {
+          "background": "bg-white",
+          "padding": "py-8",
+          "titleSize": "text-2xl",
+          "containerWidth": "max-w-7xl"
+        }
+      }
+    },
+    {
+      "id": "timeline-vertical",
+      "name": "Vertical Timeline",
+      "description": "Vertical timeline layout for chronological content",
+      "config": {
+        "layout": {
+          "type": "timeline",
+          "columns": { "sm": 1, "md": 1, "lg": 1, "xl": 1 },
+          "gap": 8
+        },
+        "styles": {
+          "background": "bg-gray-50",
+          "padding": "py-16",
+          "titleSize": "text-3xl",
+          "containerWidth": "max-w-3xl"
+        }
+      }
+    },
+    {
+      "id": "gallery-grid",
+      "name": "Gallery Grid",
+      "description": "Image-focused grid layout with hover effects",
+      "config": {
+        "layout": {
+          "type": "gallery",
+          "columns": { "sm": 2, "md": 3, "lg": 4, "xl": 5 },
+          "gap": 4
+        },
+        "styles": {
+          "background": "bg-black",
+          "padding": "py-10",
+          "titleSize": "text-3xl",
+          "containerWidth": "max-w-7xl"
+        }
+      }
+    }
+  ]
+}

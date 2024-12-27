@@ -7,9 +7,8 @@ import { Github } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
-const navItems = [
+const baseNavItems = [
   { path: '/', label: 'Home' },
-  { path: '/resources', label: 'Resources' },
   { path: '/posts', label: 'Articles' },
 ]
 
@@ -18,9 +17,25 @@ export function Navigation() {
   const router = useRouter()
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
+  const [sections, setSections] = useState([])
 
   useEffect(() => {
     let isMounted = true;
+
+    const fetchSections = async () => {
+      try {
+        const response = await fetch('/api/sections');
+        const data = await response.json();
+        if (isMounted) {
+          // 只使用未隐藏的section
+          const visibleSections = data.sections.filter(section => !section.isHidden);
+          setSections(visibleSections);
+        }
+      } catch (error) {
+        console.error('Failed to fetch sections:', error);
+      }
+    };
+
     const checkLoginStatus = async () => {
       if (!isMounted) return;
       setIsLoading(true);
@@ -35,6 +50,7 @@ export function Navigation() {
       }
     };
 
+    fetchSections();
     checkLoginStatus();
 
     return () => {
@@ -51,6 +67,17 @@ export function Navigation() {
       console.error('Failed to logout:', error);
     }
   };
+
+  // 合并基础导航项和section导航项
+  const navItems = [
+    ...baseNavItems,
+    ...sections.map(section => ({
+      path: section.type === 'resource-section' 
+        ? `/calculators/section/${section.id}`  
+        : `/#${section.id}`,                    
+      label: section.title
+    }))
+  ];
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background">

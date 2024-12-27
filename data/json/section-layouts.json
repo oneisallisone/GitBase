@@ -1,0 +1,64 @@
+{
+  "layouts": [
+    {
+      "id": "default",
+      "name": "默认布局",
+      "description": "默认的网格布局",
+      "config": {
+        "columns": {
+          "sm": 1,
+          "md": 2,
+          "lg": 3,
+          "xl": 3
+        },
+        "gap": 6,
+        "padding": "py-12"
+      }
+    },
+    {
+      "id": "wide",
+      "name": "宽屏布局",
+      "description": "适合宽屏显示的布局",
+      "config": {
+        "columns": {
+          "sm": 1,
+          "md": 2,
+          "lg": 4,
+          "xl": 4
+        },
+        "gap": 8,
+        "padding": "py-16"
+      }
+    },
+    {
+      "id": "compact",
+      "name": "紧凑布局",
+      "description": "紧凑的网格布局",
+      "config": {
+        "columns": {
+          "sm": 2,
+          "md": 3,
+          "lg": 4,
+          "xl": 5
+        },
+        "gap": 4,
+        "padding": "py-8"
+      }
+    },
+    {
+      "id": "list",
+      "name": "列表布局",
+      "description": "垂直列表布局",
+      "config": {
+        "columns": {
+          "sm": 1,
+          "md": 1,
+          "lg": 1,
+          "xl": 1
+        },
+        "gap": 4,
+        "padding": "py-8"
+      }
+    }
+  ]
+}
