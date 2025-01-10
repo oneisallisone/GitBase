@@ -83,6 +83,8 @@ For a detailed deployment guide, please refer to our [Installation and Deploymen
 ##examples
 - bg3mods.com(https://bg3mods.com/)
 - profitcalculator.top(https://profitcalculator.top/)
+- appel-game.top(https://appel-game.top)
+- ladycalculator.top(https://ladycalculator.top)
 
 ## Contributing
 
